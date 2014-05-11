@@ -1,0 +1,19 @@
+../dlamch.c: In function `dlamch_':
+../dlamch.c:100: warning: implicit declaration of function `lsame_'
+../dlamch.c: In function `dlamc2_':
+../dlamch.c:407: warning: unused variable `c__1'
+../dlamchtst.c:5: warning: return type defaults to `int'
+../lsame.c: In function `lsame_':
+../lsame.c:55: warning: suggest parentheses around && within ||
+../lsame.c:56: warning: suggest parentheses around && within ||
+../lsame.c:58: warning: suggest parentheses around && within ||
+../lsame.c:59: warning: suggest parentheses around && within ||
+../timertst.c:9: warning: return type defaults to `int'
+../timertst.c: In function `main':
+../timertst.c:49: warning: implicit declaration of function `exit'
+/opt/modules/default/init/tcsh: No such file or directory.
+make[4]: *** [install.out] Error 1
+make[3]: *** [all] Error 2
+make[2]: *** [install] Error 2
+make[1]: *** [gnu_blas-system] Error 2
+make: *** [gnu_all] Error 2

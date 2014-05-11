@@ -1,0 +1,28 @@
+( make gnu_blas-system  )
+make[1]: Entering directory `/mnt/data/developer/projects/superlu-feax-3.0'
+( make set_gnu_blas-system  ; make all )
+make[2]: Entering directory `/mnt/data/developer/projects/superlu-feax-3.0'
+( rm -f GNUmakefile.inc; \
+  ln -s GNUmakefile_include/GNUmakefile.linux_athlon-sse1_gnu_blas-system.inc GNUmakefile.inc )
+make[2]: Leaving directory `/mnt/data/developer/projects/superlu-feax-3.0'
+make[2]: Entering directory `/mnt/data/developer/projects/superlu-feax-3.0'
+( cd install; make )
+make[3]: Entering directory `/mnt/data/developer/projects/superlu-feax-3.0/install'
+mkdir --parents linux_athlon-sse1_gnu_blas-system
+cp -f GNUmakefile.mk linux_athlon-sse1_gnu_blas-system/
+( cd linux_athlon-sse1_gnu_blas-system ; make -f GNUmakefile.mk all )
+make[4]: Entering directory `/mnt/data/developer/projects/superlu-feax-3.0/install/linux_athlon-sse1_gnu_blas-system'
+gcc -c -Wall ../dlamch.c
+gcc -c -Wall ../dlamchtst.c
+gcc -c -Wall ../lsame.c
+g77 -o testdlamch dlamch.o dlamchtst.o lsame.o
+g77 -o testslamch dlamch.o dlamchtst.o lsame.o
+gcc -c -Wall ../superlu_timer.c
+gcc -c -Wall ../timertst.c
+g77 -o testtimer superlu_timer.o timertst.o
+Testing machines parameters and timer
+csh ../install.csh
+make[4]: Leaving directory `/mnt/data/developer/projects/superlu-feax-3.0/install/linux_athlon-sse1_gnu_blas-system'
+make[3]: Leaving directory `/mnt/data/developer/projects/superlu-feax-3.0/install'
+make[2]: Leaving directory `/mnt/data/developer/projects/superlu-feax-3.0'
+make[1]: Leaving directory `/mnt/data/developer/projects/superlu-feax-3.0'
